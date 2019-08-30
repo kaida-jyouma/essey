@@ -65,7 +65,7 @@
         document.write("<ul>")
         for (i=0;i<novels.length;i++){
             document.write("<li onclick='disp(" + i + ")'>" + novels[i] + "</li>");
-            if (novels[i] === ss[-1]){
+            if (novels[i] === ss[ss.length - 1]){
                 document.write("</ul><ul>");
             }
         }
