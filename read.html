@@ -59,12 +59,17 @@
     <ul>
         <script type="text/javascript" charset="utf-8">
             // 表示用
-            var li = ["振り返れば", "プログラムの憂鬱 #1", "プログラムの憂鬱 #2", "プログラムの憂鬱 #3"];
-            for (i=0;i<li.length;i++){
-                document.write("<li onclick='disp(" + i + ")'>" + li[i] + "</li>");
+            // テキストファイルは4つずつ配列へ
+            var ss = ["振り返れば", "親と私の「それぞれの言い分（ジェネレーションギャップ）」"];
+            var prog_dis_1 = ["プログラムの憂鬱 #1", "プログラムの憂鬱 #2", "プログラムの憂鬱 #3"];
+            var novels = ss.concat(prog_dis_1);
+            for (i=0;i<novels.length;i++){
+                document.write("<li onclick='disp(" + i + ")'>" + novels[i] + "</li>");
             }
             function disp(num){
-                var nov = ["mart.txt", "prog_dis-1.txt", "prog_dis-2.txt", "prog_dis-3.txt"];
+                // 順番を間違えないように
+                var ssnov = ["mart.txt", "gengap.txt"];
+                var prog_dis_nov1 = ["prog_dis-1.txt", "prog_dis-2.txt", "prog_dis-3.txt"];
                 document.getElementById('novel').innerHTML = '<iframe id="if01" src="' + nov[num] + '"></iframe>';
             }
         </script>
