@@ -59,12 +59,12 @@
     <ul>
         <script type="text/javascript" charset="utf-8">
             // 表示用
-            var li = ["振り返れば", "プログラムの憂鬱 #1", "プログラムの憂鬱 #2"];
+            var li = ["振り返れば", "プログラムの憂鬱 #1", "プログラムの憂鬱 #2", "プログラムの憂鬱 #3"];
             for (i=0;i<li.length;i++){
                 document.write("<li onclick='disp(" + i + ")'>" + li[i] + "</li>");
             }
             function disp(num){
-                var nov = ["mart.txt", "prog_dis-1.txt", "prog_dis-2.txt"];
+                var nov = ["mart.txt", "prog_dis-1.txt", "prog_dis-2.txt", "prog_dis-3.txt"];
                 document.getElementById('novel').innerHTML = '<iframe id="if01" src="' + nov[num] + '"></iframe>';
             }
         </script>
