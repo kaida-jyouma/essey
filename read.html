@@ -66,7 +66,7 @@
             for (i=0;i<novels.length;i++){
                 document.write("<li onclick='disp(" + i + ")'>" + novels[i] + "</li>");
                 if (novels[i] === ss[-1]){
-                    document.write("<br>");
+                    document.write("</ul><ul>");
                 }
             }
             function disp(num){
