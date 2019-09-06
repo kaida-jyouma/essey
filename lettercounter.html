@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LetterCounter</title>
+    <style type="text/css" media="all">
+        html{
+            text-align: center;
+            background-color: #d0edeb;
+        }
+        #title{
+            font-size: 30px;
+            font-weight: 300;
+            margin-top: 15px;
+            margin-bottom: 12.5px;
+        }
+        #tx-paste{
+            width: 600px;
+            height: 400px;
+            font-size: 14px;
+            font-weight: 200;
+            background-color: #d0edeb;
+        }
+        #tx-paste:focus{
+            outline: none;
+            outline-width: 0px;
+        }
+    </style>
+</head>
+<body onkeydown="countdis()" onload="countdis()">
+    <h1 id="title">Letter Counter</h1>
+    <textarea id="tx-paste" onkeyup="countdis()" onload="readtext()"></textarea>
+    <p id="win-dis" style='font-size: 18px;text-align: center;'></p>
+    <script type="text/javascript" charset="utf-8">
+        function countdis(){
+            setTimeout(count(), 5);
+        }
+        function readtext(){
+            var txtf = localStorage.getItem("#stext");
+            setTimeout(function() {document.getElementById('tx-paste').value = txtf;}, 10);
+        }
+        function count(){
+            var text = document.getElementById('tx-paste').value;
+            var l0 = [];
+            var l1 = [];
+            for (i=0;i<text.length;i++) if (text[i] !== "\n") l0.push(text[i]);
+            // for (i=0;i<text.length;i++) if (text[i] !== "\n" && text[i] !== " ") l1.push(text[i]);
+            var ct = text.length;
+            var cr = l0.length;
+            // var cw = l1.length;
+            var format = "letters: " + cr + "<br>rows: " + (ct - cr + 1) + "<br>words: " + ct;
+            document.getElementById('win-dis').innerHTML = format;
+            var lst = localStorage;
+            lst.setItem("#stext", text);
+        }
+    </script>
+</body>
+</html>
