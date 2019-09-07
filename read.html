@@ -1,4 +1,4 @@
-<!--DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,7 +60,7 @@
         // 表示用
         // テキストファイルは4つずつ配列へ
         var ss = ["振り返れば", "親と私の「すれ違い」", "Gの生き方", "ポシャる。", "締め切り効果"];
-        var ows = ["会社員の日常と非日常 #1"];
+        var ows = ["会社員の日常と非日常：&#32;", "#1 昼食という罠"];
         var prog_dis_1 = ["プログラムの憂鬱 #1", "プログラムの憂鬱 #2", "プログラムの憂鬱 #3", "プログラムの憂鬱 #4"];
         var prog_dis_2 = ["プログラムの憂鬱 #5"];
         var novels0 = ss.concat(ows);
@@ -70,7 +70,7 @@
         for (i=0;i<novels.length;i++){
             document.write("<li onclick='disp(" + i + ")'>" + novels[i] + "</li>");
             if (novels[i] === ss[ss.length - 1]){
-                document.write("</ul><br><ul>会社員の日常と非日常：&#32;");
+                document.write("</ul><br><ul>");
             }else if(novels[i] === ows[ows.length - 1]){
                 document.write("</ul><br><ul>")
             }
@@ -79,7 +79,7 @@
         function disp(num){
             // 順番を間違えないように
             var ssnov = ["./ss/mart.html", "./ss/gengap.html", "./ss/g_life.html", "./ss/quit_and.html", "./ss/deadeff.html"];
-            var ownov = ["./ows/ows_01.html"];
+            var ownov = ["", "./ows/ows_01.html"];
             var progdis_1 = ["./p_dis/prog_dis-1.html", "./p_dis/prog_dis-2.html", "./p_dis/prog_dis-3.html", "./p_dis/prog_dis-4.html"];
             var progdis_2 = ["./p_dis/prog_dis-5.html"];
             var nov0 = ssnov.concat(ownov);
@@ -88,7 +88,7 @@
             if (num === "top"){
                 document.getElementById('novel').innerHTML = '<iframe id="if01" src=main-page.html></iframe>';
             }else{
-                document.getElementById('novel').innerHTML = '<iframe id="if01" src="' + nov[num] + '"></iframe>';
+                if (nov[num] !== "") document.getElementById('novel').innerHTML = '<iframe id="if01" src="' + nov[num] + '"></iframe>';
             }
         }
     </script>
@@ -98,9 +98,9 @@
         <p><a href=lettercounter.html target="_blank" style="color: #000000;">lettercounter</a></p>
     </div>
 </body>
-</html-->
+</html>
 <!--改修時のページ-->
-<!DOCTYPE html>
+<!--DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -136,4 +136,4 @@
     <p>※あくまで予定ですので、早まる可能性もあります。</p>
     <p></p>
 </body>
-</html>
+</html-->
