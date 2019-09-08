@@ -61,11 +61,11 @@
         // テキストファイルは4つずつ配列へ
         var ss = ["振り返れば", "親と私の「すれ違い」", "Gの生き方", "ポシャる。", "締め切り効果"];
         var ows = ["会社員の日常と非日常&#32;:&#32;", "#1&#32;"];
-        var prog_dis_1 = ["プログラムの憂鬱&#32;:&#32", "#1&#32;", "#2&#32;", "#3&#32;", "#4&#32;"];
-        var prog_dis_2 = ["#5&#32;"];
+        var prog_dis_1 = ["プログラムの憂鬱&#32;:&#32", "#1", "#2", "#3", "#4", "#5"];
+        //var prog_dis_2 = [""];
         var novels0 = ss.concat(ows);
-        var novels1 = novels0.concat(prog_dis_1);
-        var novels = novels1.concat(prog_dis_2);
+        //var novels1 = novels0.concat(prog_dis_1);
+        var novels = novels0.concat(prog_dis_1);
         document.write("<ul>");
         for (i=0;i<novels.length;i++){
             document.write("<li onclick='disp(" + i + ")'>" + novels[i] + "</li>");
