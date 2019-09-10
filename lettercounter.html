@@ -27,13 +27,16 @@
         }
     </style>
 </head>
-<body onkeydown="countdis()" onload="countdis()">
+<body onkeydown="countdis()" onload="readtext()">
     <h1 id="title">Letter Counter</h1>
     <textarea id="tx-paste" onkeyup="countdis()" onload="readtext()"></textarea>
     <p id="win-dis" style='font-size: 18px;text-align: center;'></p>
     <script type="text/javascript" charset="utf-8">
         function countdis(){
             setTimeout(count(), 5);
+        }
+        function loaddis(){
+            //setTimeout(, 5);
         }
         function readtext(){
             var txtf = localStorage.getItem("#stext");
