@@ -40,7 +40,7 @@
         }
         onload = function (){
             var txtf = localStorage.getItem("#stext");
-            setTimeout(function() {document.getElementById('tx-paste').value = txtf;document.getElementById('tx-paste').focus()}, 10);
+            setTimeout(function() {document.getElementById('tx-paste').value = txtf;document.getElementById('tx-paste').focus();count();}, 10);
             
         }
         function count(){
