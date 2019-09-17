@@ -40,8 +40,8 @@
         }
         onload = function (){
             var txtf = localStorage.getItem("#stext");
-            setTimeout(function() {document.getElementById('tx-paste').value = txtf;}, 10);
-            setTimeout(count(), 20);
+            setTimeout(function() {document.getElementById('tx-paste').value = txtf;document.getElementById('tx-paste').focus()}, 10);
+            
         }
         function count(){
             var text = document.getElementById('tx-paste').value;
