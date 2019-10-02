@@ -86,6 +86,7 @@
         function copy(){
             var textarea = document.getElementById('tx-paste');
             if (execCopy(textarea.value)){
+                document.getElementById('tx-paste').select();
                 // document.getElementById('pmsg').innerHTML = "text was copied...";
                 window.alert('text was copied...');
                 // setTimeout(function() {document.getElementById('pmsg').innerHTML = "";}, 2000);
